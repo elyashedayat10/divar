@@ -76,14 +76,20 @@ TEMPLATES = [
 ]
 
 
+# DATABASES = {
+#         'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         "NAME": "postgres",
+#         "USER": "postgres",
+#         "PASSWORD": "ZnQhsP1JWGrzp3WCkmpcU9lLxiLlrmQq",
+#         "HOST": "divardb.elyashedayat10.svc",
+#         "PORT": "5432",
+#     }
+# }
 DATABASES = {
-        'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "ZnQhsP1JWGrzp3WCkmpcU9lLxiLlrmQq",
-        "HOST": "divardb.elyashedayat10.svc",
-        "PORT": "5432",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
