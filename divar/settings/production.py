@@ -36,10 +36,15 @@ INSTALLED_APPS = [
     "mptt",
     "rest_framework",
     "rest_framework.authtoken",
+    "silk",
+    "debug_toolbar",
     # custom
     "categories.apps.CategoriesConfig",
     "wantads.apps.WantadsConfig",
+    
 ]
+
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -49,9 +54,18 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "silk.middleware.SilkyMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "divar.urls"
+
+
+
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 TEMPLATES = [
     {
