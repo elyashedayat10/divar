@@ -57,16 +57,7 @@ ROOT_URLCONF = "divar.urls"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "ZnQhsP1JWGrzp3WCkmpcU9lLxiLlrmQq",
-        "HOST": "divardb.elyashedayat10.svc",
-        "PORT": "5432",
-    }
-}
+
 
 TEMPLATES = [
     {
@@ -83,6 +74,18 @@ TEMPLATES = [
         },
     },
 ]
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "ZnQhsP1JWGrzp3WCkmpcU9lLxiLlrmQq",
+        "HOST": "divardb.elyashedayat10.svc",
+        "PORT": "5432",
+    }
+}
 
 WSGI_APPLICATION = "divar.wsgi.application"
 
