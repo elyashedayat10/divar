@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
+from django.template.defaulttags import url
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -8,3 +10,11 @@ urlpatterns = [
     path("", include("wantads.urls", namespace="want_ad")),
     path("category/", include("categories.urls")),
 ]
+if settings.DEBUG:
+    # ADD ROOT MEDIA FILES
+    urlpatterns = urlpatterns + static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
+    urlpatterns = urlpatterns + static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+    )
